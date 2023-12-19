@@ -13,18 +13,22 @@ laberinto = [
     "##########"
 ]
 
-posicion_personaje = [1, 1]
-
 def imprimir_laberinto():
     os.system("clear" if os.name == "posix" else "cls")
     for fila in laberinto:
         print(fila)
 
-# Solicitar el nombre del jugador
-nombre_jugador = input("¡Bienvenido! Por favor, ingresa tu nombre: ")
+def obtener_nombre_jugador():
+    nombre = input("Ingresa tu nombre: ")
+    return nombre
 
-# Mostrar mensaje de bienvenida
-print(f"\n¡Hola {nombre_jugador}! Bienvenido al juego del laberinto.\n")
+def imprimir_mensaje_bienvenida(nombre):
+    print(f"Bienvenido, {nombre}!")
+
+nombre_jugador = obtener_nombre_jugador()
+imprimir_mensaje_bienvenida(nombre_jugador)
+
+posicion_personaje = [1, 1]
 
 while True:
     imprimir_laberinto()
