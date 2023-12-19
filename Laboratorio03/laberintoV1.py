@@ -20,6 +20,12 @@ def imprimir_laberinto():
     for fila in laberinto:
         print(fila)
 
+# Solicitar el nombre del jugador
+nombre_jugador = input("¡Bienvenido! Por favor, ingresa tu nombre: ")
+
+# Mostrar mensaje de bienvenida
+print(f"\n¡Hola {nombre_jugador}! Bienvenido al juego del laberinto.\n")
+
 while True:
     imprimir_laberinto()
 
